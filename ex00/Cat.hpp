@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:06:52 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/15 11:37:12 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/16 11:41:55 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,13 @@
 class Cat : public Animal
 {
 	public:
+		Cat();
+		Cat(Cat const &other);
+		~Cat();
 
+		Cat &operator=(Cat const &other);
+	
+		void	makeSound() const;
 };
 
 #endif

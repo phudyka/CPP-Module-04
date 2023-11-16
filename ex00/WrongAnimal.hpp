@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/15 10:18:52 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/15 11:37:19 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/16 11:43:25 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,20 @@
 
 class WrongAnimal
 {
-	public:
+	protected:
+		std::string	type;
 
+	public:
+		WrongAnimal();
+		WrongAnimal(std::string type);
+		WrongAnimal(WrongAnimal const &other);
+		virtual	~WrongAnimal();
+
+		WrongAnimal &operator=(WrongAnimal const &other);
+		
+		std::string const &getType() const;
+		virtual void	makeSound() const;
+		
 };
 
 #endif
-

@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 16:06:57 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/15 11:37:15 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/16 11:41:44 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,13 @@
 class Dog : public Animal
 {
 	public:
+		Dog();
+		Dog(Dog const &other);
+		~Dog();
 
+		Dog &operator=(Dog const &other);
+	
+		void	makeSound() const;
 };
 
 #endif

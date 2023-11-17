@@ -6,38 +6,42 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:59:14 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/16 14:42:24 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/16 14:50:06 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <iostream>
 #include "Animal.hpp"
 #include "Dog.hpp"
 #include "Cat.hpp"
 #include "WrongAnimal.hpp"
 #include "WrongCat.hpp"
-#include <cstdlib>
+#include "Brain.hpp"
 
 int main()
 {
-    const Animal* meta = new Animal();
+    const int arraySize = 10;
+    Animal* animalArray[arraySize];
+
+    for (int i = 0; i < arraySize; ++i)
+    {
+        if (i < arraySize / 2)
+            animalArray[i] = new Dog();
+        else
+            animalArray[i] = new Cat();
+    }
+    for (int i = 0; i < arraySize; ++i)
+        delete animalArray[i];
+
     const Animal* j = new Dog();
     const Animal* i = new Cat();
-
-    std::cout << j->getType() << " ";
-    j->makeSound(); 
-    std::cout << i->getType() << " ";
-    i->makeSound();
-    const WrongAnimal* wrongMeta = new WrongAnimal();
     const WrongAnimal* wrongJ = new WrongCat();
-    std::cout << wrongJ->getType() << " ";
-    wrongJ->makeSound(); 
-    std::cout << wrongMeta->getType() << " ";
-    wrongMeta->makeSound(); 
-    delete meta;
+    const WrongAnimal* wrongMeta = new WrongAnimal();
+
     delete j;
     delete i;
-    delete wrongMeta;
     delete wrongJ;
+    delete wrongMeta;
 
-    return 0;
+    return (0);
 }

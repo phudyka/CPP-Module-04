@@ -6,7 +6,7 @@
 #    By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/23 11:49:28 by phudyka           #+#    #+#              #
-#    Updated: 2023/11/21 15:42:42 by phudyka          ###   ########.fr        #
+#    Updated: 2023/11/22 10:49:19 by phudyka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,7 +16,9 @@ CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS = main.cpp AAnimal.cpp Dog.cpp Cat.cpp WrongAnimal.cpp WrongCat.cpp Brain.cpp
+SRCS =		main.cpp Cure.cpp Ice.cpp 					\
+			IMateriaSource.cpp MateriaSource.cpp 		\
+		 	AMateria.cpp ICharacter.cpp Character.cpp 	\
 
 OBJS = $(SRCS:.cpp=.o)
 

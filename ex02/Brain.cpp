@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/16 14:46:23 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/17 10:54:36 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/17 11:46:28 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ Brain::Brain(Brain &ref)
 	id_ref = ref.getIdeas();
 	this->ideas = new std::string[100];
 	for (int i = 0; i < 100; i++)
-		this->ideas[i] = id_ref[i] + "tooken";
+		this->ideas[i] = id_ref[i] + "stolen";
 	std::cout << "An other brain has stolen all the good ideas !" << std::endl;
 }
 

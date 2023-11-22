@@ -1,33 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   AAnimal.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 16:06:52 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/21 10:36:36 by phudyka          ###   ########.fr       */
+/*   Created: 2023/11/14 16:06:48 by phudyka           #+#    #+#             */
+/*   Updated: 2023/11/21 10:35:29 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#ifndef AAnimal_HPP
+# define AAnimal_HPP
 
-#include "Brain.hpp"
-#include "AAnimal.hpp"
+#include <string>
+#include <iostream>
 
-class Cat : public AAnimal
+class	AAnimal 
 {
-	private:
-		Brain	*brain;
-	public:
-		Cat();
-		Cat(Cat const &other);
-		~Cat();
+	protected:
+	std::string	type;
 
-		Cat &operator=(Cat const &other);
-	
-		void	makeSound() const;
+	public:
+		AAnimal();
+		AAnimal(std::string type);
+		AAnimal(AAnimal const &other);
+		virtual	~AAnimal();
+
+		AAnimal &operator=(AAnimal const &other);
+		
+		std::string const &getType() const;
+		virtual void makeSound() const = 0;
+		
 };
 
 #endif

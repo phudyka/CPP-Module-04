@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.hpp                                         :+:      :+:    :+:   */
+/*   Cure.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 16:06:48 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/15 16:07:13 by phudyka          ###   ########.fr       */
+/*   Created: 2023/11/22 10:26:57 by phudyka           #+#    #+#             */
+/*   Updated: 2023/11/22 10:43:22 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef ANIMAL_HPP
-# define ANIMAL_HPP
+#include "Cure.hpp"
 
-#include <string>
-#include <iostream>
+Cure::Cure() : AMateria("cure") {}
 
-class Animal
+Cure::~Cure() {}
+
+AMateria	*Cure::clone() const
 {
-	protected:
-	std::string	type;
+	return (new Cure(*this));
+}
 
-	public:
-		Animal();
-		Animal(std::string type);
-		Animal(Animal const &other);
-		virtual	~Animal();
-
-		Animal &operator=(Animal const &other);
-		
-		std::string const &getType() const;
-		virtual void makeSound() const;
-		
-};
-
-#endif
+void	Cure::use(ICharacter &target)
+{
+	std::cout << "* heals " << target.getName() << "'s wounds *" << std::endl;
+}

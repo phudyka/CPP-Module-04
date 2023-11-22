@@ -1,33 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   Ice.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 16:06:52 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/21 10:36:36 by phudyka          ###   ########.fr       */
+/*   Created: 2023/11/22 10:26:59 by phudyka           #+#    #+#             */
+/*   Updated: 2023/11/22 10:36:05 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#include "Ice.hpp"
 
-#include "Brain.hpp"
-#include "AAnimal.hpp"
+Ice::Ice() : AMateria("ice") {}
 
-class Cat : public AAnimal
+Ice::~Ice() {}
+
+AMateria	*Ice::clone() const
 {
-	private:
-		Brain	*brain;
-	public:
-		Cat();
-		Cat(Cat const &other);
-		~Cat();
+	return (new Ice(*this));
+}
 
-		Cat &operator=(Cat const &other);
-	
-		void	makeSound() const;
-};
-
-#endif
+void	Ice::use(ICharacter &target)
+{
+	std::cout << "* shoots an ice bolt at " << target.getName() << " *" << std::endl;
+}

@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.hpp                                            :+:      :+:    :+:   */
+/*   ICharacter.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/14 16:06:52 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/21 10:36:36 by phudyka          ###   ########.fr       */
+/*   Created: 2023/11/22 10:03:28 by phudyka           #+#    #+#             */
+/*   Updated: 2023/11/22 11:41:17 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef CAT_HPP
-#define CAT_HPP
+#include "ICharacter.hpp"
 
-#include "Brain.hpp"
-#include "AAnimal.hpp"
-
-class Cat : public AAnimal
+ICharacter::ICharacter(std::string const &name) : name(name)
 {
-	private:
-		Brain	*brain;
-	public:
-		Cat();
-		Cat(Cat const &other);
-		~Cat();
-
-		Cat &operator=(Cat const &other);
 	
-		void	makeSound() const;
-};
+}
 
-#endif
+ICharacter::~ICharacter()
+{
+}

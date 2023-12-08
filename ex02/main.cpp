@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:59:14 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/21 10:35:46 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/12/08 15:36:54 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,6 @@ int main()
     delete wrongJ;
     delete wrongMeta;
 
-	system("leaks Je_ne_veux_pas_brûler_le_monde");
+	system("leaks Classe_abstraite");
     return (0);
 }

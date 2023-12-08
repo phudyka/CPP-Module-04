@@ -6,27 +6,31 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:44:24 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/22 10:43:57 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/12/08 16:34:00 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef AMATERIA_HPP
 # define AMATERIA_HPP
 
-#include <string>
+#include <iostream>
 #include "ICharacter.hpp"
 
+class ICharacter;
 class AMateria
 {
 	protected:
-		std::string	type;
+		const std::string	_type;
 
 	public:
-		AMateria(std::string const &type) {};
-		~AMateria();
-		std::string const	&getType() const;
-		virtual AMateria*	clone() const = 0;
-		virtual void		use(ICharacter &target);
+		AMateria();
+		AMateria(std::string const &_type);
+		virtual ~AMateria();
+		//AMateria & AMateria::operator=(AMateria const & ref);
+		AMateria(AMateria const &ref);
+		virtual std::string const	&getType() const;
+		virtual AMateria*			clone() const = 0;
+		virtual void				use(ICharacter &target);
 };
 
 #endif

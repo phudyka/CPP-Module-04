@@ -6,19 +6,17 @@
 #    By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/23 11:49:28 by phudyka           #+#    #+#              #
-#    Updated: 2023/11/22 10:49:19 by phudyka          ###   ########.fr        #
+#    Updated: 2023/12/08 16:24:17 by phudyka          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-TARGET = Classe_abstraite
+TARGET = Interface
 
 CXX = c++
 
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS =		main.cpp Cure.cpp Ice.cpp 					\
-			IMateriaSource.cpp MateriaSource.cpp 		\
-		 	AMateria.cpp ICharacter.cpp Character.cpp 	\
+SRCS =	main.cpp Character.cpp AMateria.cpp MateriaSource.cpp Cure.cpp Ice.cpp \
 
 OBJS = $(SRCS:.cpp=.o)
 

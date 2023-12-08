@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 10:23:24 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/22 10:44:22 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/12/08 11:20:20 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,14 @@
 
 class Ice : public AMateria
 {
+	private:
+		std::string	_type;
 	public:
 		Ice();
 		virtual ~Ice();
-		virtual	AMateria	*clone() const;
+		Ice(Ice const &ref);
+		Ice &operator=(Ice const &ref);
+		virtual	Ice			*clone() const;
 		virtual void		use(ICharacter &target);
 };
 

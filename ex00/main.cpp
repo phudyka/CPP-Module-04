@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/14 15:59:14 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/16 14:42:24 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/12/08 15:36:14 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int main()
     delete i;
     delete wrongMeta;
     delete wrongJ;
+
+	system("leaks Polymorphisme");
 
     return 0;
 }

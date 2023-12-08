@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 10:51:00 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/22 10:54:09 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/11/24 10:58:09 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,12 +18,14 @@
 class MateriaSource : public IMateriaSource
 {
 	private:
-		AMateria	*source[4];
+		AMateria	*_inventory[4];
 	public:
 		MateriaSource();
-		virtual 	~MateriaSource();
-		void		learnMatera(AMateria *m);
-		AMateria	*createMateria(std::string const *type);
+		MateriaSource(MateriaSource const & ref);
+		~MateriaSource();
+		MateriaSource & operator=(MateriaSource const & ref);
+		void learnMateria(AMateria *m);
+		AMateria* createMateria(std::string const & type);
 };
 
 #endif

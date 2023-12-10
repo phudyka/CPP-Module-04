@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:44:21 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/24 09:30:06 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/12/10 14:52:24 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ AMateria::AMateria()
 
 AMateria::AMateria(std::string const &type) : _type(type)
 {
-	std::cout << "Abstract Materia has been created" << std::endl;
+	std::cout << "Abstract Materia has been cloned" << std::endl;
 }
 
 AMateria::~AMateria()

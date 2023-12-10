@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:44:24 by phudyka           #+#    #+#             */
-/*   Updated: 2023/12/08 16:34:00 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/12/10 14:52:06 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 #include <iostream>
 #include "ICharacter.hpp"
 
-class ICharacter;
 class AMateria
 {
 	protected:

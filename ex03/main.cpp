@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/21 15:43:49 by phudyka           #+#    #+#             */
-/*   Updated: 2023/12/08 16:24:24 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/12/10 14:41:11 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -116,7 +116,7 @@ int main()
 
     std::cout << "LEAKS:" << std::endl;
     std::cout << "-----------------------" << std::endl;
-    system("Interface");
+    system("leaks Interface");
 	
 	return (0);
 }

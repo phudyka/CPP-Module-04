@@ -6,7 +6,7 @@
 /*   By: phudyka <phudyka@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/11/22 10:39:22 by phudyka           #+#    #+#             */
-/*   Updated: 2023/11/24 11:34:03 by phudyka          ###   ########.fr       */
+/*   Updated: 2023/12/10 14:53:33 by phudyka          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,9 @@ class Character : public ICharacter
 		Character(std::string name);
 		Character(Character const &ref);
 		~Character();
+
 		Character &operator=(Character const &ref);
+
 		std::string const &getName() const;
 		void equip(AMateria *m);
 		void unequip(int idx);
